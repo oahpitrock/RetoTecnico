@@ -8,10 +8,10 @@ on:
         required: true
         default: dev
 
-env:
-  AWS_REGION: us-east-1
-  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/custom-image
-  IMAGE_TAG: latest
+#env:
+  #AWS_REGION: us-east-1
+  #IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/custom-image
+  #IMAGE_TAG: latest
 
 jobs:
   build-and-deploy:
