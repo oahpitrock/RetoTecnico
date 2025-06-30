@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # -----------------------------
 # Requisitos básicos
 # -----------------------------
-RUN  apt-get install -y \
+RUN  apt-get update && apt-get install -y \
     wget \
     curl \
     gnupg \
@@ -32,7 +32,7 @@ RUN curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor
 # -----------------------------
 # Instalación de herramientas
 # -----------------------------
-RUN  apt-get install -y \
+RUN  apt-get update && apt-get install -y \
     git \
     openjdk-11-jre \
     maven \
