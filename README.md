@@ -24,9 +24,9 @@ Repositorio en GitHub
 
 # Secretos de GitHub
 
-Nombre  / Descripcion 
+Nombre
 
-AWS_ACCESS_KEY_ID	/ Tu access key de AWS
+AWS_ACCESS_KEY_ID	/
 AWS_SECRET_ACCESS_KEY / 
 DOCKERHUB_USERNAME /
 DOCKERHUB_TOKEN / 
