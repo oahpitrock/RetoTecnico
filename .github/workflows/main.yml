@@ -24,7 +24,6 @@ jobs:
     - name: Log in to DockerHub
       uses: docker/login-action@v3
       with:
-        context: ./docker
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
@@ -34,7 +33,7 @@ jobs:
         context: ./docker
         push: true
         tags: |
-           ${{ secrets.DOCKERHUB_USERNAME }}/custom-image:${{ env.IMAGE_TAG }}
+           ${{ secrets.DOCKERHUB_USERNAME }}/custom-image:latest
 
     - name: Set up Terraform
       uses: hashicorp/setup-terraform@v3
