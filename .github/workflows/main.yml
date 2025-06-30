@@ -30,11 +30,11 @@ jobs:
     - name: Build and Tag Docker Image
       working-directory: ./docker
       run: |
-       docker build -t ${{ env.IMAGE_NAME }}/custom-image:${{ env.IMAGE_TAG }} .
+       docker build -t ${{ vars.IMAGE_NAME }}/custom-image:latest .
 
     - name: Push Docker Image
       run: |
-       docker push ${{ secrets.DOCKERHUB_USERNAME }}/custom-image:${{ env.IMAGE_TAG }}
+       docker push ${{ vars.IMAGE_NAME }}/custom-image:latest
 
 
     - name: Set up Terraform
