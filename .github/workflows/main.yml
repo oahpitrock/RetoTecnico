@@ -33,7 +33,7 @@ jobs:
         context: ./docker
         push: true
         tags: |
-           ${{ secrets.DOCKERHUB_USERNAME }}/custom-image:latest
+           ${{ vars.DOCKERHUB_USERNAME }}/custom-image:latest
 
     - name: Set up Terraform
       uses: hashicorp/setup-terraform@v3
