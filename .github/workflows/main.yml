@@ -30,7 +30,7 @@ jobs:
     - name: Build and Tag Docker Image
       working-directory: ./docker
       run: |
-       docker build -t oahp/custom-image:latest .
+       docker build -t ${{ vars.IMAGE_NAME }}/custom-image:latest .
 
     - name: Push Docker Image
       run: |
