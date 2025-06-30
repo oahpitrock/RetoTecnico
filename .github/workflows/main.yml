@@ -6,7 +6,7 @@ on:
       environment:
         description: "Ambiente de despliegue"
         required: true
-        default: dev
+        default: DEV
 
 #env:
   #AWS_REGION: us-east-1
@@ -27,6 +27,7 @@ jobs:
     - name: Log in to DockerHub
       uses: docker/login-action@v3
       with:
+        context: ./docker
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
