@@ -3,7 +3,7 @@ name: CI/CD AWS Terraform & Docker
 on:
   push:
     branches:
-      - DEV
+      - main
 
 #env:
   #AWS_REGION: us-east-1
