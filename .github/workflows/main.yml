@@ -1,12 +1,9 @@
 name: CI/CD AWS Terraform & Docker
 
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: "Ambiente de despliegue"
-        required: true
-        default: DEV
+  push:
+    branches:
+      - DEV
 
 #env:
   #AWS_REGION: us-east-1
