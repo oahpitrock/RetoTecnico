@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  IMAGE_NAME: your-dockerhub-user/custom-image
+  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/custom-image
   IMAGE_TAG: latest
 
 jobs:
