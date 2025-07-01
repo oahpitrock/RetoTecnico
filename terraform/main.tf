@@ -2,10 +2,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_key_pair" "my_key" {
-  key_name   = "my-key"
-  public_key = file("~/.ssh/id_rsa.pub")
-}
+
 
 resource "aws_security_group" "ec2_sg" {
   name_prefix = "ec2-sg"
@@ -33,10 +30,16 @@ resource "aws_security_group" "ec2_sg" {
 }
 
 resource "aws_instance" "docker_host" {
-  ami           = "ami-0c2b8ca1dad447f8a" # Amazon Linux 2
-  instance_type = "t3.medium"
-  key_name      = aws_key_pair.my_key.key_name
+  ami           = var.ami_id
+  instance_type = var.instance_type
+  key_name      = var.key_name
+  subnet_id     = var.subnet_id
   security_groups = [aws_security_group.ec2_sg.name]
+
+# Configuración para el disco adicional
+  root_block_device {
+    volume_size = var.disk_size  # Tamaño del disco en GB
+  }
 
   user_data = file("scripts/user-data.sh")
 
