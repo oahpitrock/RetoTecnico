@@ -45,7 +45,7 @@ jobs:
 
     - name: Terraform Plan
       working-directory: terraform
-      run: terraform plan
+      run: terraform plan -var="allowed_ip=${{ vars.ALLOWED_IP }}"
 
     - name: Terraform Apply
       working-directory: terraform
