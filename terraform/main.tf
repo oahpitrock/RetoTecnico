@@ -11,7 +11,7 @@ resource "aws_security_group" "ec2_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["${{ vars.PUBLIC_IP }}/32"]  # <- cámbiala
+    cidr_blocks = ["${var.allowed_ip}/32"]  # <- cámbiala
   }
 
   ingress {
