@@ -12,6 +12,8 @@ Un contenedor Docker que incluye herramientas como Git, Maven, PostgreSQL, Apach
 
 Despliegue automatizado usando GitHub Actions.
 
+El Terraform State es enviado a un Backend que ya esta creado en aws (s3Bucket)
+
 # Requisitos Previos 
 
 Cuenta de AWS
