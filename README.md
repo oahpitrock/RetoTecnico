@@ -30,3 +30,10 @@ AWS_ACCESS_KEY_ID	/
 AWS_SECRET_ACCESS_KEY / 
 DOCKERHUB_USERNAME /
 DOCKERHUB_TOKEN /
+
+# Terraform State
+
+El backend debe existir previamente (el bucket S3 y la tabla DynamoDB deben estar creados antes del terraform init).
+El pipeline debe tener permisos para acceder al bucket y a la tabla (mediante las variables AWS_ACCESS_KEY_ID y AWS_SECRET_ACCESS_KEY).
+
+
