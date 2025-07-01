@@ -34,3 +34,8 @@ variable "disk_size" {
   type        = number
   default     = 20  # Tamaño del disco en GB por defecto
 }
+
+variable "allowed_ip" {
+  description = "IP permitida para acceso SSH"
+  type        = string
+}
